@@ -1,0 +1,31 @@
+/Users/kartikeyrai/Library/Python/3.9/lib/python/site-packages/urllib3/__init__.py:35: NotOpenSSLWarning: urllib3 v2 only supports OpenSSL 1.1.1+, currently the 'ssl' module is compiled with 'LibreSSL 2.8.3'. See: https://github.com/urllib3/urllib3/issues/3020
+  warnings.warn(
+15:20:28 |        pipeline | INFO    | ============================================================
+15:20:28 |        pipeline | INFO    | 🚀 Instagram Reel Automation Pipeline — Starting
+15:20:28 |        pipeline | INFO    |    Time: 2026-04-12T09:50:28.591686+00:00
+15:20:28 |        pipeline | INFO    | ============================================================
+15:20:28 |   token_refresh | WARNING | No Instagram access token configured, skipping refresh
+15:20:28 |        pipeline | INFO    | 
+📋 Step 1/7: Control Check
+15:20:28 |         control | INFO    | Control flag: 'START' — proceeding
+15:20:28 |         control | INFO    | Daily limit OK: 0/3 posts today
+15:20:28 |         control | INFO    | ✅ All control checks passed — pipeline may proceed
+15:20:28 |        pipeline | INFO    | 
+📈 Step 2/7: Fetching Trends
+15:20:28 |           trend | INFO    | 📈 Fetching trends for geo=IN
+15:20:29 |           trend | INFO    | Google Trends RSS returned 10 entries
+15:20:29 |           dedup | INFO    | Filtered 10 topics → 10 unique
+15:20:29 |           trend | INFO    | ✅ Found 10 unique trending topics
+15:20:29 |           trend | INFO    |   #1: lsg बनाम gt (Trending)
+15:20:29 |           trend | INFO    |   #2: arjun tendulkar (Trending)
+15:20:29 |           trend | INFO    |   #3: ચાંદી (Trending)
+15:20:29 |           trend | INFO    |   #4: tamannaah bhatia (Trending)
+15:20:29 |           trend | INFO    |   #5: ಮಳೆ (Trending)
+15:20:29 |        pipeline | INFO    | Got 10 trending topics
+15:20:29 |        pipeline | INFO    | 
+📰 Step 3/7: Matching News
+15:20:29 |            news | INFO    | 📰 Searching 9 RSS feeds for 10 topics
+15:20:35 |            news | INFO    | Fetched 105 total articles
+15:20:35 |            news | WARNING | ❌ No valid news match found for any trending topic
+15:20:35 |        pipeline | WARNING | No news match found — aborting pipeline (fail-safe)
+15:20:35 |        pipeline | INFO    | Pipeline result: {'status': 'skipped', 'reason': 'no_news_match'}
